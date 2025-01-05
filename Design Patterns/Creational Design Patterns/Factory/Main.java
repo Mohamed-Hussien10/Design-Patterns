@@ -1,9 +1,16 @@
+import Shapes.*;
+
 public class Main {
     public static void main(String[] args) {
-        CreditCard creditCard = CreditFactory.getCreditCard("Titanum");
-        System.out.println(creditCard.getCardType());
-        System.out.println(creditCard.getCardLimit());
-        System.out.println(creditCard.getAnnualCharge());
+        ShapeFactory shapeFactory = new ShapeFactory();
         
+        Shape circle = shapeFactory.getShape("CIRCLE");
+        circle.draw();
+
+        Shape rectangle = shapeFactory.getShape("RECTANGLE");
+        rectangle.draw();
+
+        Shape square = shapeFactory.getShape("SQUARE");
+        square.draw();
     }
 }
